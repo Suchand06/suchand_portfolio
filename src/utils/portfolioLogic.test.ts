@@ -32,6 +32,8 @@ test('filterProjects only includes verified liveUrl on spaceHack and ResumeIQ', 
   assert.equal(withLiveDemo.length, 2);
   const liveIds = withLiveDemo.map((p) => p.id).sort();
   assert.deepEqual(liveIds, ['resumeiq', 'spacehack']);
+  const spacehack = FEATURED_PROJECTS.find((p) => p.id === 'spacehack');
+  assert.equal(spacehack?.liveUrl, 'https://spacehack404.vercel.app/');
 });
 
 test('filterSkillCategories filters properly by category id', () => {

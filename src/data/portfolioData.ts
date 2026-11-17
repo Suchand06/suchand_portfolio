@@ -464,7 +464,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     ],
     techStack: ['React.js', 'Vite', 'JavaScript', 'Tailwind CSS', 'HTML5 Canvas', 'Web Audio API'],
     githubUrl: 'https://github.com/Suchand06/spaceHack',
-    liveUrl: 'https://spacehack-seven.vercel.app/',
+    liveUrl: 'https://spacehack404.vercel.app/',
     previewImage: '/src/assets/images/spacehack_arcade_preview_1794928453352.jpg',
     metrics: [
       { label: 'Render Engine', value: 'HTML5 Canvas', detail: 'Real-time 2D sprite, particle & collision loop' },
