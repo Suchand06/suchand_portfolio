@@ -152,6 +152,29 @@ export const ProjectMockup: React.FC<ProjectMockupProps> = ({ project }) => {
         </div>
       );
 
+    case 'space-strike-3d':
+      return (
+        <div className="w-full h-56 sm:h-64 bg-[#0B0B0F] border-b border-zinc-800/80 relative overflow-hidden group">
+          {project.previewImage && (
+            <img
+              src={project.previewImage}
+              alt="SPACE STRIKE 3D third-person WebGL space combat preview"
+              referrerPolicy="no-referrer"
+              loading="lazy"
+              className="w-full h-full object-cover object-center opacity-85 group-hover:scale-[1.02] transition-transform duration-300"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#141419] via-[#09090B]/40 to-transparent" />
+          <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-zinc-200">
+            <span className="inline-flex items-center gap-1.5 text-violet-300 font-semibold">
+              <Gamepad2 className="w-3.5 h-3.5" />
+              Three.js WebGL · GLSL Shaders · UnrealBloomPass
+            </span>
+            <span className="text-zinc-300">5 Sectors · 3 Bosses</span>
+          </div>
+        </div>
+      );
+
     case 'spacehack':
       return (
         <div className="w-full h-56 sm:h-64 bg-[#0B0B0F] border-b border-zinc-800/80 relative overflow-hidden group">

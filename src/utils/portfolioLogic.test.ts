@@ -9,9 +9,9 @@ import {
 } from './portfolioLogic';
 import { FEATURED_PROJECTS, SKILL_CATEGORIES, PERSONAL_INFO } from '../data/portfolioData';
 
-test('filterProjects returns all 5 projects when category is All', () => {
+test('filterProjects returns all 6 projects when category is All', () => {
   const result = filterProjects(FEATURED_PROJECTS, 'All');
-  assert.equal(result.length, 5);
+  assert.equal(result.length, 6);
 });
 
 test('filterProjects accurately filters by category and secondaryCategories', () => {
@@ -23,17 +23,20 @@ test('filterProjects accurately filters by category and secondaryCategories', ()
   assert.ok(ids.includes('datascope'));
 
   const otherProjects = filterProjects(FEATURED_PROJECTS, 'Other');
-  assert.equal(otherProjects.length, 1);
-  assert.equal(otherProjects[0].id, 'spacehack');
+  assert.equal(otherProjects.length, 2);
+  const otherIds = otherProjects.map((p) => p.id).sort();
+  assert.deepEqual(otherIds, ['space-strike-3d', 'spacehack']);
 });
 
-test('filterProjects only includes verified liveUrl on spaceHack and ResumeIQ', () => {
+test('filterProjects only includes verified liveUrl on spaceHack, SPACE STRIKE 3D, and ResumeIQ', () => {
   const withLiveDemo = FEATURED_PROJECTS.filter((p) => Boolean(p.liveUrl));
-  assert.equal(withLiveDemo.length, 2);
+  assert.equal(withLiveDemo.length, 3);
   const liveIds = withLiveDemo.map((p) => p.id).sort();
-  assert.deepEqual(liveIds, ['resumeiq', 'spacehack']);
+  assert.deepEqual(liveIds, ['resumeiq', 'space-strike-3d', 'spacehack']);
   const spacehack = FEATURED_PROJECTS.find((p) => p.id === 'spacehack');
   assert.equal(spacehack?.liveUrl, 'https://spacehack404.vercel.app/');
+  const spaceStrike3d = FEATURED_PROJECTS.find((p) => p.id === 'space-strike-3d');
+  assert.equal(spaceStrike3d?.liveUrl, 'https://space-strike-3d.ai.studio/');
 });
 
 test('filterSkillCategories filters properly by category id', () => {

@@ -327,10 +327,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           <div className="space-y-1">
             <div className="text-2xl sm:text-3xl font-extrabold font-mono tabular-nums text-white">
-              5 Systems
+              6 Systems
             </div>
             <div className="text-xs text-zinc-400">
-              Production Full-Stack, Local-First RAG, Database & ML Projects
+              Production Full-Stack, Local-First RAG, 3D WebGL, Database & ML Projects
             </div>
           </div>
         </div>

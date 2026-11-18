@@ -439,6 +439,44 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     ],
   },
   {
+    id: 'space-strike-3d',
+    title: 'SPACE STRIKE 3D — 3D Space Combat',
+    subtitle: 'Browser-based 3D third-person space combat game with Three.js, GLSL shaders & multi-phase bosses',
+    category: 'Other',
+    secondaryCategories: ['Full Stack'],
+    featuredSpan: 'standard',
+    ownershipNote: 'Independently Developed by Suchand C Achar (AI Studio Live)',
+    shortDescription:
+      'An immersive 3D third-person space combat game built with React, TypeScript, Vite, and Three.js across five alien-occupied sectors.',
+    problemSolved:
+      'Delivers console-style third-person 3D starfighter combat directly in the browser without native installs, combining custom GLSL nebula shaders, GPU post-processing bloom, procedural 3D ship/planet geometry, and synthesized Web Audio.',
+    architectureSummary:
+      'Architected with React 19, TypeScript, Vite, Three.js, GSAP, and Tailwind CSS. Modular engine separates pure state rules (rules.ts) from WebGL orchestration (GameEngine.ts, EnvironmentManager.ts, ShipFactory.ts, ParticleSystem.ts, ProceduralAssets.ts, AudioManager.ts) with EffectComposer + UnrealBloomPass post-processing.',
+    features: [
+      'Real-time 3D space environment with custom GLSL FBM nebula sky domes, parallax starfields, procedural planets, and instanced destructible asteroid belts',
+      'Procedural multi-part 3D starfighter with metallic hull/bump textures, smooth third-person chase camera, afterburner boost, evasive barrel rolls, and Fresnel energy shield shader',
+      '5-weapon arsenal: Dual Laser, Plasma Cannon, homing Seeker Missiles, Triple Laser spread, and charged Nova Beam ultimate',
+      '5 enemy archetypes (Scout, Interceptor, Heavy Destroyer, cloaking Stealth Fighter, Alien Bomber) and 3 multi-phase boss encounters culminating in the Omega Alien Mothership',
+      '8 collectible power-up drops and 3 playable modes: 5-Sector Campaign, Endless Survival, and 90-second Time Attack',
+      'GPU EffectComposer + UnrealBloomPass post-processing with Low / Medium / High quality presets, procedural Web Audio API soundscape, and LocalStorage persistence',
+    ],
+    techStack: ['React', 'TypeScript', 'Vite', 'Three.js', 'GSAP', 'Tailwind CSS', 'WebGL / GLSL', 'Web Audio API'],
+    githubUrl: 'https://github.com/Suchand06/SPACE-STRIKE-3D',
+    liveUrl: 'https://space-strike-3d.ai.studio/',
+    previewImage: '/src/assets/images/space_strike_3d_preview_1794982838112.jpg',
+    metrics: [
+      { label: '3D Engine', value: 'Three.js + GLSL', detail: 'FBM sky domes, Fresnel shields & UnrealBloomPass' },
+      { label: 'Combat Scope', value: '5 Weapons · 3 Bosses', detail: 'Campaign (5 sectors), Endless & Time Attack modes' },
+      { label: 'Audio & Storage', value: 'Web Audio + Local', detail: 'Synthesized SFX, dynamic music & top-10 scores' },
+    ],
+    workflowSteps: [
+      'Initialize procedural 3D starfighter, FBM nebula sky dome, instanced asteroids, and EffectComposer bloom pipeline.',
+      'Drive third-person flight physics with banking inertia, afterburner boost, and evasive barrel rolls.',
+      'Orchestrate wave AI across 5 enemy archetypes, 8 power-up drops, and multi-phase capital-ship boss battles.',
+      'Synthesize dynamic audio via Web Audio API and persist campaign unlocks, quality presets, and high scores in LocalStorage.',
+    ],
+  },
+  {
     id: 'spacehack',
     title: 'spaceHack — SPACE STRIKE',
     subtitle: '60fps browser-based 2D arcade space shooter built with HTML5 Canvas & Web Audio API',
